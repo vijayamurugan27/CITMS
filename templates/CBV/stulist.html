@@ -1,0 +1,77 @@
+
+{% extends "CBV/base.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library_list</title>
+    <link href="{% static 'css/style1.css' %}" rel="stylesheet">
+    <style>
+        table, th, td {
+          border: 1px solid white;
+          border-collapse: collapse;
+        }
+        th, td {
+          background-color: #96D4D4;
+        }
+        </style>
+        
+</head>
+<body>
+    {% block content %}
+    <section class="page-title bg-primary position-relative">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center">
+              <h1 class="text-white font-tertiary">Library Page.</h1>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+    
+       
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Year</th>
+                <th>Book</th>
+                <th>Author</th>
+                <th>Book Number</th>
+                <th>Issued Date</th>
+                <th>Book Returned</th>
+                <th>Book Returned Date</th>
+                <th scope="col">Details</th>
+                <th scope="col">Update</th>
+                <th scope="col">Delete</th>
+            </tr>
+            {% for object in object_list %}
+                    <tr>
+                        <td>{{object.Stu_name}}</td>
+                        <td> {{object.department}}</td>
+                        <td>{{object.year}}</td>
+                        <td>{{object.book}}</td>
+                        <td>{{object.Author}}</td>
+                        <td>{{object.BookNumber}}</td>
+                        <td>{{object.Issued_date}}</td>
+                        <td>{{object.returned}}</td>
+                        <td>{{object.returned_data}}</td>
+                        <td><a type="button" class="btn btn-primary" style="border-radius: 20px;" href= "{{object.id}}/detail">Detail</a></td>
+                        <td><a type=" button " class = "btn btn-success" style="border-radius: 20px;" href ="{{object.id}}/update" >Update</a></td>
+                        <td><a type = "button" class="btn btn-danger" style="border-radius: 20px;" href="{{object.id}}/delete">Delete</a></td>
+                    </tr>
+                    
+            {% endfor %}
+
+        </table>
+        
+    {% endblock %}
+
+</body>
+</html>

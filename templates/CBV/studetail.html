@@ -1,0 +1,138 @@
+{% extends "CBV/base.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    
+</head>
+<body>
+    {% block content %}
+<!-- page title -->
+<section class="page-title bg-primary position-relative">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1 class="text-white font-tertiary">Library Page.</h1>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+  <!-- /page title -->
+  
+  <!-- portfolio -->
+  <section class="section">
+    <div class="container">
+     
+    </div>
+  </section>
+  <!-- /portfolio -->
+  
+  <!-- clients -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="section-title">Students-Book Details page.</h2>
+        </div>
+      </div>
+      <div class="row">
+        
+          
+           
+    
+
+                <!-- <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Year</th>
+                        <th>Book</th>
+                        <th>Author</th>
+                        <th>Book Number</th>
+                        <th>Issued Date</th>
+                        <th>Book Returned</th>
+                        <th>Book Returned Date</th>
+                        <th>Details</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                    {% for object in student %}                    
+                            <tr>
+                                <td>{{object.Stu_name}}</td>
+                                <td> {{object.department}}</td>
+                                <td>{{object.year}}</td>
+                                <td>{{object.book}}</td>
+                                <td>{{object.Author}}</td>
+                                <td>{{object.BookNumber}}</td>
+                                <td>{{object.Issued_date}}</td>
+                                <td>{{object.returned}}</td>
+                                <td>{{object.returned_data}}</td>
+                                <td><a type="button" class="btn btn-primary" href= "{{object.id}}/detail">Detail</a></td>
+                                <td><a type=" button " class = "btn btn-success" href ="{{object.id}}/update" >Update</a>
+                                <td><a type = "button" class="btn btn-danger" href="{{object.id}}/delete">Delete</a></td>
+                            
+                                </tr>                           
+                            
+                    {% endfor %}             
+        
+                </table>
+This is the new table. -->
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Department</th>
+                        <th scope="col">Year</th>
+                        <th scope="col">Book</th>
+                        <th scope="col">Author</th>
+                        <th scope="col">Book Number</th>
+                        <th scope="col">Issued Date</th>
+                        <th scope="col">Book Returned</th>
+                        <th scope="col">Book Returned Date</th>
+                        
+                        <th>Home page</th>
+                        
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                       
+                      <tr>
+                        
+                        <td>{{object.Stu_name}}</td>
+                        <td>{{object.department}}</td>
+                        <td>{{object.year}}</td>
+                        <td>{{object.book}}</td>
+                        <td>{{object.Author}}</td>
+                        <td>{{object.BookNumber}}</td>
+                        <td>{{object.Issued_date}}</td>
+                        <td>{{object.returned}}</td>
+                        <td>{{object.returned_data}}
+
+                        
+                        
+                        <td><a type = "button" class="btn btn-success" href="{% url 'list' %}">Home</a></td>
+                    
+                        
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+        
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /clients -->
+  
+
+    {% endblock %}    
+</body>
+</html>

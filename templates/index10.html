@@ -1,0 +1,20 @@
+{% comment %} 
+student -------------
+{{student}}
+{% for i in student %}
+
+{% comment %} {{ i }}<br> {% endcomment %}
+{% comment %} 
+Name :{{i.first_name}}<br>
+Roll number {{ i.rollno }}
+<br>
+Primary key : {{ i.id }}
+<br>
+<hr>
+{% endfor %} {% endcomment %} 
+
+Name :{{student.first_name}}<br>
+
+Roll number : {{student.rollno}}
+
+{{student.first_name}} {{student.rollno}}

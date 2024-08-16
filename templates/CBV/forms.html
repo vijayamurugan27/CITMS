@@ -1,0 +1,47 @@
+
+{% extends "CBV/base.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>library-forms</title>
+    
+</head>
+<body>
+    
+        {% block content %}
+        <section class="page-title bg-primary position-relative">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 text-center">
+                  <h1 class="text-white font-tertiary">Library Page.</h1>
+                </div>
+              </div>
+            </div>
+            
+          </section>
+        
+           
+                <div class="mx-left" style="width: 50%; margin-left: 10%;">
+
+                <h1>Library Book Entry.</h1>  <br><br>
+
+                    <!-- {% for i in student %}
+                    {{i}}
+                    {% endfor %} -->
+
+                        <form action  = '', method = "post">
+                            {% csrf_token %}
+                            {{form.as_p}}
+                            <input type = "submit" value = "Submit" class = "btn btn-success" style = "border-radius: 20px;"><br><br><br><br><br><br>
+                            
+                        </form> 
+                </div>
+        {% endblock %}
+    
+</body>
+</html>

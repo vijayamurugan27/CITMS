@@ -1,0 +1,10 @@
+{
+    "Stu_name": "John Doe",
+    "department": "Computer Science",
+    "year": "3",
+    "book": "Introduction to Algorithms",
+    "Author": "Thomas H. Cormen",
+    "BookNumber": 123456,
+    "returned": false,
+    "returned_date": null
+}
